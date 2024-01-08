@@ -358,13 +358,13 @@ Output:
 ```
 <br>
 
-## 8. Discuss the usage of `args` and `kwargs` in _function definitions_.
+## 8. Discuss the usage of `*args` and `**kwargs` in _function definitions_.
 
 In Python, **args** and **kwargs** are terms used to indicate that a function can accept a variable number of arguments and parameters, respectively.
 
-### `args`: Variable Positional Arguments
+### `*args`: Variable Positional Arguments
 
-`args` is used to capture an arbitrary or zero number of **positional arguments**. When calling a function with 'args', the arguments are collected into a tuple within the function. This parameter allows for a flexible number of arguments to be processed.
+`*args` is used to capture an arbitrary or zero number of **positional arguments**. When calling a function with '*args', the arguments are collected into a tuple within the function. This parameter allows for a flexible number of arguments to be processed.
 
 Here's an example:
 
@@ -375,9 +375,9 @@ def sum_all(*args):
 print(sum_all(1, 2, 3))  # Output: 6
 ```
 
-### `kwargs`: Variable Keyword Arguments
+### `**kwargs`: Variable Keyword Arguments
 
-`kwargs` is utilized to capture an arbitrary or zero number of **keyword arguments**. When calling a function with `kwargs`, the arguments are collected into a dictionary within the function. The double star indicates that it's a keyword argument.
+`**kwargs` is utilized to capture an arbitrary or zero number of **keyword arguments**. When calling a function with `**kwargs`, the arguments are collected into a dictionary within the function. The double star indicates that it's a keyword argument.
 
 This feature is especially handy when developers are unsure about the exact nature or number of keyword arguments that will be transmitted.
 
@@ -395,7 +395,7 @@ display_info(name="Alice", age=25, location="New York")
 # location: New York
 ```
 
-### Using `args` and `kwargs` Together
+### Using `*args` and `**kwargs` Together
 
 Developers also have the **flexibility** to use both `*args` and `**kwargs` together in a function definition, allowing them to handle a mix of positional and keyword arguments.
 
